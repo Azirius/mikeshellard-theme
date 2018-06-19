@@ -3,6 +3,12 @@
 @import "./transitions.scss";
 @import "./blog.scss";
 
+#app-container {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+
 .highlight-top-bar {
     border-top: 7px solid #1978b7;
 }
