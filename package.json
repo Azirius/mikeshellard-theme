@@ -4,15 +4,16 @@
   "description": "Mike Shellard homepage theme",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
-    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
-    "hmr": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
-    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "author": "Mike Shellard",
   "license": "ISC",
   "devDependencies": {
-    "laravel-mix": "^0.5.3"
+    "cross-env": "^5.1",
+    "laravel-mix": "^2.0"
   },
   "dependencies": {
     "bulma": "^0.7.0"
